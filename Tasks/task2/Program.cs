@@ -6,17 +6,16 @@
 using System;
 
 Console.WriteLine("Введите целое число");
-int number = int.Parse(Console.ReadLine()!);
+string number = Console.ReadLine()!;
 
 int sum = 0;
-while (number != 0) 
+foreach (char a in number)
 {
-    sum += number % 10;
-    number /= 10;
+    sum += a - '0';
 }
 Console.WriteLine($"Сумма цифр в числе равна {sum}");
 
- 
+
 
 
 
